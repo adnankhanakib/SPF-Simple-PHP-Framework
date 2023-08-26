@@ -1,0 +1,26 @@
+{
+	"general":{
+		"site_name":"Demo",
+		"version":"V1.0",
+		"author":"Adnan",
+		"debug":true
+	},
+
+	"routes":{
+		"index":"./pages/default.php",
+		"test":"./pages/test.php"
+	},
+
+	"error_pages":{
+		"404":"./pages/error/404.php",
+		"403":"",
+		"400":""
+	},
+
+	"database":{
+		"host":"",
+		"username":"",
+		"password":"",
+		"name":""
+	}
+}

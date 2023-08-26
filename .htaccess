@@ -1,0 +1,9 @@
+Order Allow,Deny
+Allow from all
+
+RewriteRule ^(app\.json) - [F,L,NC]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php?page=$1 [QSA,L]
