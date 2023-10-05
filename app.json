@@ -3,11 +3,12 @@
 		"site_name":"Demo",
 		"version":"V1.0",
 		"author":"Adnan",
-		"debug":true
+		"debug":true,
+		"base_url":"http://localhost/aiub_portal/"
 	},
 
 	"routes":{
-		"index":"./pages/default.php",
+		"index":"./pages/login.php",
 		"test":"./pages/test.php"
 	},
 

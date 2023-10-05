@@ -29,6 +29,8 @@
 		include $error_pages['404'];
 	}
 	
+	echo "<script src='./core/js/jquery.js'></script>";
+	echo "<script src='./core/js/func.js'></script>";
 	
 
 

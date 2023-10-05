@@ -65,6 +65,24 @@ $app = json_decode($jsonData);
 	    foreach ($items_thread as $key => $value) {
 	    	$s = $items_thread[$key];
 	    	$test = $s;
+	    	if(strpos($test, "=")){
+	    		$d = explode("=", $test);
+				switch ($d[0]) {
+					case 'style':
+						$buffer = str_replace("{{".$s."}}", "<link rel='stylesheet' href='".$app->general->base_url."assets/css/".$d[1]."'>", $buffer);
+						break;
+					case 'js':
+						$buffer = str_replace("{{".$s."}}", "<script src='".$app->general->base_url."assets/js/".$d[1]."'></script>", $buffer);
+						break;
+					case 'img':
+						$buffer = str_replace("{{".$s."}}", "<img src='".$app->general->base_url."assets/images/".$d[1]."'>", $buffer);
+						break;
+					
+					default:
+						// code...
+						break;
+				}
+	    	}
 			$val = $app;
 			foreach(explode('->', $test) as $item) {
 			  $val = $val->$item;
