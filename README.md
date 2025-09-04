@@ -70,7 +70,9 @@ All settings are defined in `app.json`:
 2. Add your own pages inside **pages/** and reference them in routes.
 3. Run on a local server *(XAMPP, WAMP, etc.)* and open:
 `http://localhost/aiub_portal/ -- Example`
---
+
+---
+
 ## 🎨 Template Placeholders
 Inside any page you can use placeholders:
 
@@ -91,7 +93,8 @@ Inside any page you can use placeholders:
 
 `{{img=logo.png}}` loads `<img src=...>`. 
 
---
+---
+
 ## 🛠️ Helper Functions
 
 | Function                           | Description                                        | Example                                        |
@@ -105,7 +108,7 @@ Inside any page you can use placeholders:
 | `prettyPrint($data)`               | Debug print arrays/objects.                        | `prettyPrint($_POST);`                         |
 | `setJsonValue($buffer)`            | Template parser (used automatically by index.php). | (see placeholders above)                       |
 
---
+---
 ## 🗄️ Database Helpers
 | Function                                       | Description                              | Example                                                                  |
 | ---------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------ |
@@ -113,7 +116,7 @@ Inside any page you can use placeholders:
 | `GetCount($table,$select='',$id='',$extra='')` | Count rows.                              | `$total = GetCount('users');`                                            |
 | `InsertTable($table,$array)`                   | Insert a new row with associative array. | `InsertTable('users',['username'=>'john','email'=>'john@example.com']);` |
 
---
+---
 ## 🧑‍💻 Example Page
 `pages/login.php` demonstrates:
 ```html
@@ -130,7 +133,7 @@ Inside any page you can use placeholders:
 </html>
 ```
 
---
+---
 
 ## 🤝 Contributing
 Contributions are welcome. Fork the repo, create a branch, and submit a pull request.
